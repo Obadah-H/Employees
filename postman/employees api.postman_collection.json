@@ -1,0 +1,765 @@
+{
+	"info": {
+		"_postman_id": "4662f5fd-9597-4962-93a4-d73281bcc0b5",
+		"name": "employees api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29908075"
+	},
+	"item": [
+		{
+			"name": "add employee",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {},
+				"followOriginalHttpMethod": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "host",
+						"value": "localhost",
+						"disabled": true
+					},
+					{
+						"key": "user-agent",
+						"value": "Symfony"
+					},
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "accept-language",
+						"value": "en-us,en;q=0.5"
+					},
+					{
+						"key": "accept-charset",
+						"value": "ISO-8859-1,utf-8;q=0.7,*;q=0.7"
+					},
+					{
+						"key": "content-length",
+						"value": "51",
+						"disabled": true
+					},
+					{
+						"key": "content-type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"first_name\": \"Mark\",\n    \"last_name\": \"Jhonson\",\n    \"email\": \"aa@bb.com\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{protocol}}://{{host}}/api/employees/add",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"employees",
+						"add"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "201 Created",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "host",
+								"value": "localhost"
+							},
+							{
+								"key": "user-agent",
+								"value": "Symfony"
+							},
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "accept-language",
+								"value": "en-us,en;q=0.5"
+							},
+							{
+								"key": "accept-charset",
+								"value": "ISO-8859-1,utf-8;q=0.7,*;q=0.7"
+							},
+							{
+								"key": "content-length",
+								"value": "51"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_ids\": [\n        40\n    ],\n    \"is_group\": false,\n    \"name\": \"newChat\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}://{{api_host}}:{{api_port}}/api/v2/chats",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{api_host}}"
+							],
+							"port": "{{api_port}}",
+							"path": [
+								"api",
+								"v2",
+								"chats"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "cache-control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						},
+						{
+							"key": "x-ratelimit-limit",
+							"value": "600"
+						},
+						{
+							"key": "x-ratelimit-remaining",
+							"value": "599"
+						},
+						{
+							"key": "access-control-allow-origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 18,\n        \"name\": \"Keith Greenfelder\",\n        \"is_group\": false,\n        \"avatar\": null,\n        \"members_count\": 2,\n        \"employee_members_count\": null,\n        \"messages_count\": 0,\n        \"last_message\": {\n            \"id\": 9,\n            \"chat_id\": 18,\n            \"author\": {\n                \"id\": 39,\n                \"phone\": \"+12798354212\",\n                \"first_name\": \"Christian\",\n                \"last_name\": \"Donnelly\",\n                \"nickname\": \"garrett.swaniawski\",\n                \"email\": \"price.edmond@example.com\",\n                \"birth\": \"1977-05-24\",\n                \"avatar\": null,\n                \"contact_name\": null,\n                \"is_online\": false,\n                \"last_active\": null,\n                \"about\": null,\n                \"muted\": false,\n                \"phone_verified_at\": \"2024-02-07 06:19:29\",\n                \"email_verified_at\": null,\n                \"created_at\": null,\n                \"updated_at\": null,\n                \"deleted_at\": null\n            },\n            \"reply_to_message\": null,\n            \"text\": \"Christian \\u0441\\u043e\\u0437\\u0434\\u0430\\u043b(\\u0430) \\u0447\\u0430\\u0442\",\n            \"type\": \"system\",\n            \"is_edited\": false,\n            \"is_read\": true,\n            \"users_have_read\": [],\n            \"forwarded_from_message\": null,\n            \"files\": [],\n            \"caption\": null,\n            \"author_employee\": null,\n            \"in_page\": null,\n            \"deleted_at\": null,\n            \"created_at\": \"2024-02-07 06:19:30\",\n            \"updated_at\": \"2024-02-07 06:19:30\"\n        },\n        \"pending_messages_count\": 0,\n        \"draft\": [],\n        \"call_id\": null,\n        \"company_id\": null,\n        \"chat_pinned\": false,\n        \"is_muted\": false,\n        \"description\": null,\n        \"pinned_messages\": [],\n        \"created_at\": \"2024-02-07 06:19:30\",\n        \"updated_at\": \"2024-02-07 06:19:30\",\n        \"members\": [\n            {\n                \"id\": 39,\n                \"phone\": \"+12798354212\",\n                \"first_name\": \"Christian\",\n                \"last_name\": \"Donnelly\",\n                \"nickname\": \"garrett.swaniawski\",\n                \"email\": \"price.edmond@example.com\",\n                \"birth\": \"1977-05-24\",\n                \"avatar\": null,\n                \"contact_name\": null,\n                \"is_online\": false,\n                \"last_active\": null,\n                \"about\": null,\n                \"muted\": false,\n                \"phone_verified_at\": \"2024-02-07 06:19:29\",\n                \"email_verified_at\": null,\n                \"created_at\": null,\n                \"updated_at\": null,\n                \"deleted_at\": null\n            },\n            {\n                \"id\": 40,\n                \"phone\": \"+17654456384\",\n                \"first_name\": \"Keith\",\n                \"last_name\": \"Greenfelder\",\n                \"nickname\": \"kole.lakin\",\n                \"email\": \"montana63@example.net\",\n                \"birth\": \"1986-06-07\",\n                \"avatar\": null,\n                \"contact_name\": null,\n                \"is_online\": false,\n                \"last_active\": null,\n                \"about\": null,\n                \"muted\": false,\n                \"phone_verified_at\": \"2024-02-07 06:19:29\",\n                \"email_verified_at\": null,\n                \"created_at\": null,\n                \"updated_at\": null,\n                \"deleted_at\": null\n            }\n        ],\n        \"employee_members\": []\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "remove employee",
+			"protocolProfileBehavior": {
+				"disabledSystemHeaders": {},
+				"followOriginalHttpMethod": true
+			},
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "host",
+						"value": "localhost",
+						"disabled": true
+					},
+					{
+						"key": "user-agent",
+						"value": "Symfony"
+					},
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "accept-language",
+						"value": "en-us,en;q=0.5"
+					},
+					{
+						"key": "accept-charset",
+						"value": "ISO-8859-1,utf-8;q=0.7,*;q=0.7"
+					},
+					{
+						"key": "content-length",
+						"value": "51",
+						"disabled": true
+					},
+					{
+						"key": "content-type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": \"1\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{protocol}}://{{host}}/api/employees/delete",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"employees",
+						"delete"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "201 Created",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "host",
+								"value": "localhost"
+							},
+							{
+								"key": "user-agent",
+								"value": "Symfony"
+							},
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "accept-language",
+								"value": "en-us,en;q=0.5"
+							},
+							{
+								"key": "accept-charset",
+								"value": "ISO-8859-1,utf-8;q=0.7,*;q=0.7"
+							},
+							{
+								"key": "content-length",
+								"value": "51"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_ids\": [\n        40\n    ],\n    \"is_group\": false,\n    \"name\": \"newChat\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}://{{api_host}}:{{api_port}}/api/v2/chats",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{api_host}}"
+							],
+							"port": "{{api_port}}",
+							"path": [
+								"api",
+								"v2",
+								"chats"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "cache-control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						},
+						{
+							"key": "x-ratelimit-limit",
+							"value": "600"
+						},
+						{
+							"key": "x-ratelimit-remaining",
+							"value": "599"
+						},
+						{
+							"key": "access-control-allow-origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 18,\n        \"name\": \"Keith Greenfelder\",\n        \"is_group\": false,\n        \"avatar\": null,\n        \"members_count\": 2,\n        \"employee_members_count\": null,\n        \"messages_count\": 0,\n        \"last_message\": {\n            \"id\": 9,\n            \"chat_id\": 18,\n            \"author\": {\n                \"id\": 39,\n                \"phone\": \"+12798354212\",\n                \"first_name\": \"Christian\",\n                \"last_name\": \"Donnelly\",\n                \"nickname\": \"garrett.swaniawski\",\n                \"email\": \"price.edmond@example.com\",\n                \"birth\": \"1977-05-24\",\n                \"avatar\": null,\n                \"contact_name\": null,\n                \"is_online\": false,\n                \"last_active\": null,\n                \"about\": null,\n                \"muted\": false,\n                \"phone_verified_at\": \"2024-02-07 06:19:29\",\n                \"email_verified_at\": null,\n                \"created_at\": null,\n                \"updated_at\": null,\n                \"deleted_at\": null\n            },\n            \"reply_to_message\": null,\n            \"text\": \"Christian \\u0441\\u043e\\u0437\\u0434\\u0430\\u043b(\\u0430) \\u0447\\u0430\\u0442\",\n            \"type\": \"system\",\n            \"is_edited\": false,\n            \"is_read\": true,\n            \"users_have_read\": [],\n            \"forwarded_from_message\": null,\n            \"files\": [],\n            \"caption\": null,\n            \"author_employee\": null,\n            \"in_page\": null,\n            \"deleted_at\": null,\n            \"created_at\": \"2024-02-07 06:19:30\",\n            \"updated_at\": \"2024-02-07 06:19:30\"\n        },\n        \"pending_messages_count\": 0,\n        \"draft\": [],\n        \"call_id\": null,\n        \"company_id\": null,\n        \"chat_pinned\": false,\n        \"is_muted\": false,\n        \"description\": null,\n        \"pinned_messages\": [],\n        \"created_at\": \"2024-02-07 06:19:30\",\n        \"updated_at\": \"2024-02-07 06:19:30\",\n        \"members\": [\n            {\n                \"id\": 39,\n                \"phone\": \"+12798354212\",\n                \"first_name\": \"Christian\",\n                \"last_name\": \"Donnelly\",\n                \"nickname\": \"garrett.swaniawski\",\n                \"email\": \"price.edmond@example.com\",\n                \"birth\": \"1977-05-24\",\n                \"avatar\": null,\n                \"contact_name\": null,\n                \"is_online\": false,\n                \"last_active\": null,\n                \"about\": null,\n                \"muted\": false,\n                \"phone_verified_at\": \"2024-02-07 06:19:29\",\n                \"email_verified_at\": null,\n                \"created_at\": null,\n                \"updated_at\": null,\n                \"deleted_at\": null\n            },\n            {\n                \"id\": 40,\n                \"phone\": \"+17654456384\",\n                \"first_name\": \"Keith\",\n                \"last_name\": \"Greenfelder\",\n                \"nickname\": \"kole.lakin\",\n                \"email\": \"montana63@example.net\",\n                \"birth\": \"1986-06-07\",\n                \"avatar\": null,\n                \"contact_name\": null,\n                \"is_online\": false,\n                \"last_active\": null,\n                \"about\": null,\n                \"muted\": false,\n                \"phone_verified_at\": \"2024-02-07 06:19:29\",\n                \"email_verified_at\": null,\n                \"created_at\": null,\n                \"updated_at\": null,\n                \"deleted_at\": null\n            }\n        ],\n        \"employee_members\": []\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "update employee",
+			"protocolProfileBehavior": {
+				"followOriginalHttpMethod": true
+			},
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "host",
+						"value": "localhost",
+						"disabled": true
+					},
+					{
+						"key": "user-agent",
+						"value": "Symfony"
+					},
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "accept-language",
+						"value": "en-us,en;q=0.5"
+					},
+					{
+						"key": "accept-charset",
+						"value": "ISO-8859-1,utf-8;q=0.7,*;q=0.7"
+					},
+					{
+						"key": "content-length",
+						"value": "51",
+						"disabled": true
+					},
+					{
+						"key": "content-type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\":1,\r\n    \"first_name\": \"Jhone\",\r\n    \"last_name\": \"Markson\",\r\n    \"email\": \"aa@bb.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{protocol}}://{{host}}/api/employees/update",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"employees",
+						"update"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "201 Created",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "host",
+								"value": "localhost"
+							},
+							{
+								"key": "user-agent",
+								"value": "Symfony"
+							},
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "accept-language",
+								"value": "en-us,en;q=0.5"
+							},
+							{
+								"key": "accept-charset",
+								"value": "ISO-8859-1,utf-8;q=0.7,*;q=0.7"
+							},
+							{
+								"key": "content-length",
+								"value": "51"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_ids\": [\n        40\n    ],\n    \"is_group\": false,\n    \"name\": \"newChat\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}://{{api_host}}:{{api_port}}/api/v2/chats",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{api_host}}"
+							],
+							"port": "{{api_port}}",
+							"path": [
+								"api",
+								"v2",
+								"chats"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "cache-control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						},
+						{
+							"key": "x-ratelimit-limit",
+							"value": "600"
+						},
+						{
+							"key": "x-ratelimit-remaining",
+							"value": "599"
+						},
+						{
+							"key": "access-control-allow-origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 18,\n        \"name\": \"Keith Greenfelder\",\n        \"is_group\": false,\n        \"avatar\": null,\n        \"members_count\": 2,\n        \"employee_members_count\": null,\n        \"messages_count\": 0,\n        \"last_message\": {\n            \"id\": 9,\n            \"chat_id\": 18,\n            \"author\": {\n                \"id\": 39,\n                \"phone\": \"+12798354212\",\n                \"first_name\": \"Christian\",\n                \"last_name\": \"Donnelly\",\n                \"nickname\": \"garrett.swaniawski\",\n                \"email\": \"price.edmond@example.com\",\n                \"birth\": \"1977-05-24\",\n                \"avatar\": null,\n                \"contact_name\": null,\n                \"is_online\": false,\n                \"last_active\": null,\n                \"about\": null,\n                \"muted\": false,\n                \"phone_verified_at\": \"2024-02-07 06:19:29\",\n                \"email_verified_at\": null,\n                \"created_at\": null,\n                \"updated_at\": null,\n                \"deleted_at\": null\n            },\n            \"reply_to_message\": null,\n            \"text\": \"Christian \\u0441\\u043e\\u0437\\u0434\\u0430\\u043b(\\u0430) \\u0447\\u0430\\u0442\",\n            \"type\": \"system\",\n            \"is_edited\": false,\n            \"is_read\": true,\n            \"users_have_read\": [],\n            \"forwarded_from_message\": null,\n            \"files\": [],\n            \"caption\": null,\n            \"author_employee\": null,\n            \"in_page\": null,\n            \"deleted_at\": null,\n            \"created_at\": \"2024-02-07 06:19:30\",\n            \"updated_at\": \"2024-02-07 06:19:30\"\n        },\n        \"pending_messages_count\": 0,\n        \"draft\": [],\n        \"call_id\": null,\n        \"company_id\": null,\n        \"chat_pinned\": false,\n        \"is_muted\": false,\n        \"description\": null,\n        \"pinned_messages\": [],\n        \"created_at\": \"2024-02-07 06:19:30\",\n        \"updated_at\": \"2024-02-07 06:19:30\",\n        \"members\": [\n            {\n                \"id\": 39,\n                \"phone\": \"+12798354212\",\n                \"first_name\": \"Christian\",\n                \"last_name\": \"Donnelly\",\n                \"nickname\": \"garrett.swaniawski\",\n                \"email\": \"price.edmond@example.com\",\n                \"birth\": \"1977-05-24\",\n                \"avatar\": null,\n                \"contact_name\": null,\n                \"is_online\": false,\n                \"last_active\": null,\n                \"about\": null,\n                \"muted\": false,\n                \"phone_verified_at\": \"2024-02-07 06:19:29\",\n                \"email_verified_at\": null,\n                \"created_at\": null,\n                \"updated_at\": null,\n                \"deleted_at\": null\n            },\n            {\n                \"id\": 40,\n                \"phone\": \"+17654456384\",\n                \"first_name\": \"Keith\",\n                \"last_name\": \"Greenfelder\",\n                \"nickname\": \"kole.lakin\",\n                \"email\": \"montana63@example.net\",\n                \"birth\": \"1986-06-07\",\n                \"avatar\": null,\n                \"contact_name\": null,\n                \"is_online\": false,\n                \"last_active\": null,\n                \"about\": null,\n                \"muted\": false,\n                \"phone_verified_at\": \"2024-02-07 06:19:29\",\n                \"email_verified_at\": null,\n                \"created_at\": null,\n                \"updated_at\": null,\n                \"deleted_at\": null\n            }\n        ],\n        \"employee_members\": []\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "get employee",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"followOriginalHttpMethod": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "host",
+						"value": "localhost",
+						"disabled": true
+					},
+					{
+						"key": "user-agent",
+						"value": "Symfony"
+					},
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "accept-language",
+						"value": "en-us,en;q=0.5"
+					},
+					{
+						"key": "accept-charset",
+						"value": "ISO-8859-1,utf-8;q=0.7,*;q=0.7"
+					},
+					{
+						"key": "content-length",
+						"value": "51",
+						"disabled": true
+					},
+					{
+						"key": "content-type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{protocol}}://{{host}}/api/employees/1",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"employees",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "201 Created",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "host",
+								"value": "localhost"
+							},
+							{
+								"key": "user-agent",
+								"value": "Symfony"
+							},
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "accept-language",
+								"value": "en-us,en;q=0.5"
+							},
+							{
+								"key": "accept-charset",
+								"value": "ISO-8859-1,utf-8;q=0.7,*;q=0.7"
+							},
+							{
+								"key": "content-length",
+								"value": "51"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_ids\": [\n        40\n    ],\n    \"is_group\": false,\n    \"name\": \"newChat\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}://{{api_host}}:{{api_port}}/api/v2/chats",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{api_host}}"
+							],
+							"port": "{{api_port}}",
+							"path": [
+								"api",
+								"v2",
+								"chats"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "cache-control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						},
+						{
+							"key": "x-ratelimit-limit",
+							"value": "600"
+						},
+						{
+							"key": "x-ratelimit-remaining",
+							"value": "599"
+						},
+						{
+							"key": "access-control-allow-origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 18,\n        \"name\": \"Keith Greenfelder\",\n        \"is_group\": false,\n        \"avatar\": null,\n        \"members_count\": 2,\n        \"employee_members_count\": null,\n        \"messages_count\": 0,\n        \"last_message\": {\n            \"id\": 9,\n            \"chat_id\": 18,\n            \"author\": {\n                \"id\": 39,\n                \"phone\": \"+12798354212\",\n                \"first_name\": \"Christian\",\n                \"last_name\": \"Donnelly\",\n                \"nickname\": \"garrett.swaniawski\",\n                \"email\": \"price.edmond@example.com\",\n                \"birth\": \"1977-05-24\",\n                \"avatar\": null,\n                \"contact_name\": null,\n                \"is_online\": false,\n                \"last_active\": null,\n                \"about\": null,\n                \"muted\": false,\n                \"phone_verified_at\": \"2024-02-07 06:19:29\",\n                \"email_verified_at\": null,\n                \"created_at\": null,\n                \"updated_at\": null,\n                \"deleted_at\": null\n            },\n            \"reply_to_message\": null,\n            \"text\": \"Christian \\u0441\\u043e\\u0437\\u0434\\u0430\\u043b(\\u0430) \\u0447\\u0430\\u0442\",\n            \"type\": \"system\",\n            \"is_edited\": false,\n            \"is_read\": true,\n            \"users_have_read\": [],\n            \"forwarded_from_message\": null,\n            \"files\": [],\n            \"caption\": null,\n            \"author_employee\": null,\n            \"in_page\": null,\n            \"deleted_at\": null,\n            \"created_at\": \"2024-02-07 06:19:30\",\n            \"updated_at\": \"2024-02-07 06:19:30\"\n        },\n        \"pending_messages_count\": 0,\n        \"draft\": [],\n        \"call_id\": null,\n        \"company_id\": null,\n        \"chat_pinned\": false,\n        \"is_muted\": false,\n        \"description\": null,\n        \"pinned_messages\": [],\n        \"created_at\": \"2024-02-07 06:19:30\",\n        \"updated_at\": \"2024-02-07 06:19:30\",\n        \"members\": [\n            {\n                \"id\": 39,\n                \"phone\": \"+12798354212\",\n                \"first_name\": \"Christian\",\n                \"last_name\": \"Donnelly\",\n                \"nickname\": \"garrett.swaniawski\",\n                \"email\": \"price.edmond@example.com\",\n                \"birth\": \"1977-05-24\",\n                \"avatar\": null,\n                \"contact_name\": null,\n                \"is_online\": false,\n                \"last_active\": null,\n                \"about\": null,\n                \"muted\": false,\n                \"phone_verified_at\": \"2024-02-07 06:19:29\",\n                \"email_verified_at\": null,\n                \"created_at\": null,\n                \"updated_at\": null,\n                \"deleted_at\": null\n            },\n            {\n                \"id\": 40,\n                \"phone\": \"+17654456384\",\n                \"first_name\": \"Keith\",\n                \"last_name\": \"Greenfelder\",\n                \"nickname\": \"kole.lakin\",\n                \"email\": \"montana63@example.net\",\n                \"birth\": \"1986-06-07\",\n                \"avatar\": null,\n                \"contact_name\": null,\n                \"is_online\": false,\n                \"last_active\": null,\n                \"about\": null,\n                \"muted\": false,\n                \"phone_verified_at\": \"2024-02-07 06:19:29\",\n                \"email_verified_at\": null,\n                \"created_at\": null,\n                \"updated_at\": null,\n                \"deleted_at\": null\n            }\n        ],\n        \"employee_members\": []\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "get employees",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true,
+				"followOriginalHttpMethod": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "host",
+						"value": "localhost",
+						"disabled": true
+					},
+					{
+						"key": "user-agent",
+						"value": "Symfony"
+					},
+					{
+						"key": "accept",
+						"value": "application/json"
+					},
+					{
+						"key": "accept-language",
+						"value": "en-us,en;q=0.5"
+					},
+					{
+						"key": "accept-charset",
+						"value": "ISO-8859-1,utf-8;q=0.7,*;q=0.7"
+					},
+					{
+						"key": "content-length",
+						"value": "51",
+						"disabled": true
+					},
+					{
+						"key": "content-type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{protocol}}://{{host}}/api/employees/1",
+					"protocol": "{{protocol}}",
+					"host": [
+						"{{host}}"
+					],
+					"path": [
+						"api",
+						"employees",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "201 Created",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "host",
+								"value": "localhost"
+							},
+							{
+								"key": "user-agent",
+								"value": "Symfony"
+							},
+							{
+								"key": "accept",
+								"value": "application/json"
+							},
+							{
+								"key": "accept-language",
+								"value": "en-us,en;q=0.5"
+							},
+							{
+								"key": "accept-charset",
+								"value": "ISO-8859-1,utf-8;q=0.7,*;q=0.7"
+							},
+							{
+								"key": "content-length",
+								"value": "51"
+							},
+							{
+								"key": "content-type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"user_ids\": [\n        40\n    ],\n    \"is_group\": false,\n    \"name\": \"newChat\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{protocol}}://{{api_host}}:{{api_port}}/api/v2/chats",
+							"protocol": "{{protocol}}",
+							"host": [
+								"{{api_host}}"
+							],
+							"port": "{{api_port}}",
+							"path": [
+								"api",
+								"v2",
+								"chats"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "cache-control",
+							"value": "no-cache, private"
+						},
+						{
+							"key": "content-type",
+							"value": "application/json"
+						},
+						{
+							"key": "x-ratelimit-limit",
+							"value": "600"
+						},
+						{
+							"key": "x-ratelimit-remaining",
+							"value": "599"
+						},
+						{
+							"key": "access-control-allow-origin",
+							"value": "*"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 18,\n        \"name\": \"Keith Greenfelder\",\n        \"is_group\": false,\n        \"avatar\": null,\n        \"members_count\": 2,\n        \"employee_members_count\": null,\n        \"messages_count\": 0,\n        \"last_message\": {\n            \"id\": 9,\n            \"chat_id\": 18,\n            \"author\": {\n                \"id\": 39,\n                \"phone\": \"+12798354212\",\n                \"first_name\": \"Christian\",\n                \"last_name\": \"Donnelly\",\n                \"nickname\": \"garrett.swaniawski\",\n                \"email\": \"price.edmond@example.com\",\n                \"birth\": \"1977-05-24\",\n                \"avatar\": null,\n                \"contact_name\": null,\n                \"is_online\": false,\n                \"last_active\": null,\n                \"about\": null,\n                \"muted\": false,\n                \"phone_verified_at\": \"2024-02-07 06:19:29\",\n                \"email_verified_at\": null,\n                \"created_at\": null,\n                \"updated_at\": null,\n                \"deleted_at\": null\n            },\n            \"reply_to_message\": null,\n            \"text\": \"Christian \\u0441\\u043e\\u0437\\u0434\\u0430\\u043b(\\u0430) \\u0447\\u0430\\u0442\",\n            \"type\": \"system\",\n            \"is_edited\": false,\n            \"is_read\": true,\n            \"users_have_read\": [],\n            \"forwarded_from_message\": null,\n            \"files\": [],\n            \"caption\": null,\n            \"author_employee\": null,\n            \"in_page\": null,\n            \"deleted_at\": null,\n            \"created_at\": \"2024-02-07 06:19:30\",\n            \"updated_at\": \"2024-02-07 06:19:30\"\n        },\n        \"pending_messages_count\": 0,\n        \"draft\": [],\n        \"call_id\": null,\n        \"company_id\": null,\n        \"chat_pinned\": false,\n        \"is_muted\": false,\n        \"description\": null,\n        \"pinned_messages\": [],\n        \"created_at\": \"2024-02-07 06:19:30\",\n        \"updated_at\": \"2024-02-07 06:19:30\",\n        \"members\": [\n            {\n                \"id\": 39,\n                \"phone\": \"+12798354212\",\n                \"first_name\": \"Christian\",\n                \"last_name\": \"Donnelly\",\n                \"nickname\": \"garrett.swaniawski\",\n                \"email\": \"price.edmond@example.com\",\n                \"birth\": \"1977-05-24\",\n                \"avatar\": null,\n                \"contact_name\": null,\n                \"is_online\": false,\n                \"last_active\": null,\n                \"about\": null,\n                \"muted\": false,\n                \"phone_verified_at\": \"2024-02-07 06:19:29\",\n                \"email_verified_at\": null,\n                \"created_at\": null,\n                \"updated_at\": null,\n                \"deleted_at\": null\n            },\n            {\n                \"id\": 40,\n                \"phone\": \"+17654456384\",\n                \"first_name\": \"Keith\",\n                \"last_name\": \"Greenfelder\",\n                \"nickname\": \"kole.lakin\",\n                \"email\": \"montana63@example.net\",\n                \"birth\": \"1986-06-07\",\n                \"avatar\": null,\n                \"contact_name\": null,\n                \"is_online\": false,\n                \"last_active\": null,\n                \"about\": null,\n                \"muted\": false,\n                \"phone_verified_at\": \"2024-02-07 06:19:29\",\n                \"email_verified_at\": null,\n                \"created_at\": null,\n                \"updated_at\": null,\n                \"deleted_at\": null\n            }\n        ],\n        \"employee_members\": []\n    }\n}"
+				}
+			]
+		}
+	]
+}
